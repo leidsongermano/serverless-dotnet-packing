@@ -7,7 +7,7 @@ const setworkspace = require('./lib/setworkspace');
 const clean = require('./lib/clean');
 const setcustomdotnet = require('./lib/setcustomdotnet');
 const packing = require('./lib/packing');
-const setfunction = require('./lib/setfunction');
+const setfunction = require('./lib/setfunctions');
 
 class ServerlessDotNet {
   constructor(serverless, options) {
@@ -32,7 +32,7 @@ class ServerlessDotNet {
         .then(this.clean)
         .then(this.setcustomdotnet)
         .then(this.packing)
-        .then(this.setfunction)
+        .then(this.setfunctions)
     };
   }
 }
